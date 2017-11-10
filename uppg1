@@ -1,0 +1,65 @@
+#include <stdio.h>
+#include <math.h>
+
+
+//Func Deklarationer
+int getYearFromUser(void);
+int getMonthFromUser(void);
+void printCalendarMonth(int month, int year);
+
+
+
+int main(void)
+{
+	int year, month;
+	year = getYearFromUser();
+	month = getMonthFromUser();
+	printCalendarMonth(month, year);
+	getchar();
+	
+
+
+
+
+
+
+	return 0;
+
+}
+
+
+//Func Definitioner
+int getYearFromUser(void)
+{
+	//temporär, year ska scannas in
+	int year;
+	printf("year:");
+	scanf_s("%d", &year);
+	getchar();
+	if (year <= 1900) {
+
+		printf("\n\t input not acceptable");
+
+		
+	}
+		
+
+	return year;
+	
+
+}
+
+int getMonthFromUser(void)
+{
+	//temporär
+
+	printf("\n \n month");
+	int month;
+	scanf_s("%d", &month);
+	getchar();
+	if (month >= 1 && month <= 12) 
+		return month;
+
+	else printf("\n\t input not acceptable");
+	
+}
